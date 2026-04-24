@@ -12,7 +12,6 @@ class StudentPortal extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xFFF4F6FA),
 
-      // 🔵 Drawer
       drawer: Drawer(
         child: Column(
           children: [
@@ -57,15 +56,15 @@ class StudentPortal extends StatelessWidget {
         ),
       ),
 
-      // 🔵 AppBar
+      // AppBar
      appBar: AppBar(
   elevation: 0,
   backgroundColor: Colors.transparent,
 
-  // ✅ Makes back button / menu icon white
+  
   iconTheme: const IconThemeData(color: Colors.white),
 
-  // ✅ Gradient background
+  // Gradient background
   flexibleSpace: Container(
     decoration: const BoxDecoration(
       gradient: LinearGradient(
@@ -74,7 +73,7 @@ class StudentPortal extends StatelessWidget {
     ),
   ),
 
-  // ✅ Title in white
+  // Title in white
   title: const Text(
     "Student Portal",
     style: TextStyle(
@@ -86,7 +85,7 @@ class StudentPortal extends StatelessWidget {
   centerTitle: true,
 ),
 
-      // 🔵 Body
+      //  Body
       body: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
@@ -124,7 +123,7 @@ class StudentPortal extends StatelessWidget {
     );
   }
 
-  // 🔹 Drawer Item
+  // Drawer Item
   Widget buildDrawerItem(
       BuildContext context, IconData icon, String title, Widget page) {
     return ListTile(
@@ -137,7 +136,7 @@ class StudentPortal extends StatelessWidget {
     );
   }
 
-  // 🔹 Attractive Card
+  //  Attractive Card
   Widget buildCard(
       BuildContext context, IconData icon, String title, Widget page) {
     return InkWell(

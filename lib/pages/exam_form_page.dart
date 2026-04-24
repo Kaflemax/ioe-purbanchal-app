@@ -78,7 +78,7 @@ class _ExamFormPageState extends State<ExamFormPage> {
     return Scaffold(
       backgroundColor: const Color(0xFFF4F6FA),
 
-      // 🔵 AppBar
+      // AppBar
       appBar: AppBar(
         elevation: 0,
         iconTheme: const IconThemeData(color: Colors.white),
@@ -92,14 +92,14 @@ class _ExamFormPageState extends State<ExamFormPage> {
         ),
       ),
 
-      // 🔵 BODY
+      // BODY
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
         child: Column(
           children: [
             const SizedBox(height: 10),
 
-            // 🔵 Header Card
+            //  Header Card
             Container(
               padding: const EdgeInsets.all(20),
               width: double.infinity,
@@ -131,7 +131,7 @@ class _ExamFormPageState extends State<ExamFormPage> {
 
             const SizedBox(height: 20),
 
-            // 🔵 FORM CARD
+            //  FORM CARD
             Container(
               padding: const EdgeInsets.all(20),
               decoration: BoxDecoration(
@@ -239,7 +239,7 @@ class _ExamFormPageState extends State<ExamFormPage> {
                         "Submit Exam Form",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          color: Colors.white, // ✅ FIXED
+                          color: Colors.white, 
                         ),
                       ),
               ),

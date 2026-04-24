@@ -123,10 +123,6 @@ class PastQuestionsPage extends StatelessWidget {
                 "Web Development",
                 "https://hamrocsit.com/semester/fifth/web-tech/question-bank/2076",
               ),
-              subjectTile(
-                "Math 2",
-                "https://hamrocsit.com/semester/fifth/web-tech/question-bank/2076",
-              ),
             ]),
           ],
         ),

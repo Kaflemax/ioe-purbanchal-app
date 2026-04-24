@@ -33,7 +33,7 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       body: Stack(
         children: [
-          // 🔵 Background Gradient
+          // Background Gradient
           Container(
             decoration: const BoxDecoration(
               gradient: LinearGradient(
@@ -44,7 +44,7 @@ class _LoginPageState extends State<LoginPage> {
             ),
           ),
 
-          // 🔵 Decorative Circles
+          //  Decorative Circles
           Positioned(
             top: -80,
             right: -80,

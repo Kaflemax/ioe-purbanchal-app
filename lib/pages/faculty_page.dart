@@ -53,7 +53,6 @@ class FacultyPage extends StatelessWidget {
           itemCount: faculty.length,
           itemBuilder: (context, index) {
             final f = faculty[index];
-
             return Card(
               color: Colors.white,
               elevation: 5,
