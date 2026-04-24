@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "341120970628",
+    "firebase_url": "https://contact-form-d1b3d-default-rtdb.firebaseio.com",
+    "project_id": "contact-form-d1b3d",
+    "storage_bucket": "contact-form-d1b3d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:341120970628:android:18e6303e37e4f5f1f7b7d1",
+        "android_client_info": {
+          "package_name": "com.example.collegeapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcjbNzyovPfnUQ0FuKXVcPffyL7-byOVk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
