@@ -1,6 +1,8 @@
+//Figure 1: FLutter App Initialization and Imports
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
+//Figure 2: Flutter Screen Structure (COntact US Class)
 class ContactUs extends StatefulWidget {
   const ContactUs({super.key});
 
@@ -8,48 +10,53 @@ class ContactUs extends StatefulWidget {
   State<ContactUs> createState() => _ContactUsState();
 }
 
+//Till here
+ //Figure 3: Flutter Input Controllers (Value Extraction)
+
 class _ContactUsState extends State<ContactUs> {
   final TextEditingController nameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController messageController = TextEditingController();
-
- bool loading = false;
+  
+  bool loading = false;
 
   Future<void> handleSubmit() async {
     if (nameController.text.isEmpty ||
         emailController.text.isEmpty ||
         messageController.text.isEmpty) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text("All fields are required")),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(const SnackBar(content: Text("All fields are required")));
       return;
     }
+   
 
     setState(() => loading = true);
 
     try {
+      //Figure 6: Firebase Firestore Data Storage
       await FirebaseFirestore.instance.collection("contacts").add({
         "name": nameController.text.trim(),
         "email": emailController.text.trim(),
         "message": messageController.text.trim(),
         "createdAt": FieldValue.serverTimestamp(),
       });
-
+      //Till here
       if (!mounted) return;
 
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text("Message sent successfully!")),
       );
-
+      // Till here
       nameController.clear();
       emailController.clear();
       messageController.clear();
     } catch (e) {
       if (!mounted) return;
 
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text("Error: $e")),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text("Error: $e")));
     }
 
     setState(() => loading = false);
@@ -85,9 +92,12 @@ class _ContactUsState extends State<ContactUs> {
           borderSide: BorderSide.none,
         ),
       ),
+
+      //Till here
     );
   }
 
+  //Figure 7: Flutter UI Layouy (Body Structure)
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -117,6 +127,7 @@ class _ContactUsState extends State<ContactUs> {
                   "We’d love to hear from you",
                   style: TextStyle(color: Colors.white70),
                 ),
+                //Till Here
                 const SizedBox(height: 25),
 
                 Container(
@@ -129,7 +140,7 @@ class _ContactUsState extends State<ContactUs> {
                         color: Colors.black26,
                         blurRadius: 15,
                         offset: Offset(0, 8),
-                      )
+                      ),
                     ],
                   ),
                   child: Column(
@@ -166,7 +177,10 @@ class _ContactUsState extends State<ContactUs> {
                               borderRadius: BorderRadius.circular(12),
                             ),
                           ),
+                          //Figure 4: Flutter Function Initiation
                           onPressed: loading ? null : handleSubmit,
+
+                          //Till here
                           child: loading
                               ? const CircularProgressIndicator(
                                   color: Colors.white,
@@ -180,6 +194,8 @@ class _ContactUsState extends State<ContactUs> {
                                   ),
                                 ),
                         ),
+
+                        //Till Here
                       ),
                     ],
                   ),

@@ -70,8 +70,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
           ),
-
-          // 🔵 Login Card
+          //  Login Card
           Center(
             child: SingleChildScrollView(
               padding: const EdgeInsets.all(20),
@@ -87,18 +86,12 @@ class _LoginPageState extends State<LoginPage> {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-
                     // 🔥 Logo
-                    const Icon(
-                      Icons.school,
-                      size: 70,
-                      color: Colors.white,
-                    ),
-
+                    Image.asset('assets/logo.png', height: 70),
                     const SizedBox(height: 10),
 
                     const Text(
-                      "IOE Purbanchal Campus",
+                      "IOE Purwanchal Campus",
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 20,
@@ -139,10 +132,7 @@ class _LoginPageState extends State<LoginPage> {
                       style: const TextStyle(color: Colors.white),
                       cursorColor: Colors.white,
                       decoration: InputDecoration(
-                        prefixIcon: const Icon(
-                          Icons.lock,
-                          color: Colors.white,
-                        ),
+                        prefixIcon: const Icon(Icons.lock, color: Colors.white),
                         suffixIcon: IconButton(
                           icon: Icon(
                             obscure ? Icons.visibility : Icons.visibility_off,
@@ -198,8 +188,6 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
           ),
-        ],
-      ),
-    );
-  }
+        ], ),);
+ }
 }
